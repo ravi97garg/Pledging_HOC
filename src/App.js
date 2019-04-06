@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 import './App.css';
 import Login from "./components/login";
 import Dashboard from "./components/dashboard";
+import Context from './context';
 
 class App extends Component {
 
@@ -11,12 +12,9 @@ class App extends Component {
   }
 
   addUser = (user) => {
-    console.log("#######")
-    console.log(user);
     this.setState({
       userList: [...this.state.userList, user]
-    }
-  )
+    })
   }
 
   render() {
@@ -25,7 +23,10 @@ class App extends Component {
           <Router>
             <Route exact path={'/'} render={props => <Login {...props} userCallback={this.addUser}/>
             }/>
-            <Route path={'/dashboard'} render={() => <Dashboard {...this.state}/>}/>
+            <Context.Provider value={{userList: this.state.userList}}>
+            {/*<Route path={'/dashboard'} render={() => <Dashboard {...this.state}/>}/>*/}
+              <Route path={'/dashboard'} component={Dashboard}/>
+            </Context.Provider>
           </Router>
         </div>
 
