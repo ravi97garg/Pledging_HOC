@@ -1,0 +1,10 @@
+.dashboard-wrapper {
+    background: linear-gradient(to bottom, #060e46, #61dafb);
+    color: lightgreen;
+    padding: 40px;
+}
+
+.dashboard-wrapper a {
+    text-decoration: none;
+    color: #fff;
+}

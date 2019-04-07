@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Auth from '../auth';
+import './login.css';
 
 export default class Login extends Component{
 
@@ -51,29 +52,38 @@ export default class Login extends Component{
 
     render() {
         return (
-            <form onSubmit={this.submitHandle}>
-                <input type='text'
-                       placeholder='Full name'
-                       value={this.state.fullname}
-                       name='fullname'
-                       onChange={this.updateHandle}
-                />
-                <input type='password'
-                       placeholder='Password'
-                       value={this.state.password}
-                       name='password'
-                       onChange={this.updateHandle}
-                />
-                <input type='email'
-                     placeholder='Email address'
-                     value={this.state.email}
-                     name='email'
-                     onChange={this.updateHandle}
-                />
-                <input type='submit'
-                       value='Register'
-                />
-            </form>
+            <div className='login-form'>
+                <div>
+                    <p>I, an Indian citizen, take oath that I will exercise my valuable right given by the Constitution of India, of casting my vote, under every possible circumstance and whenever I get the opportunity. Election of our representative by voting is not only our right but also our duty towards the country.</p>
+
+                    <p>I will make all possible efforts to use my vote to elect a public representative who would meet nation's expectations and,</p>
+
+                    <p>I also take oath that I would also encourage other people to vote with awareness.</p>
+                </div>
+                <form onSubmit={this.submitHandle}>
+                    <input type='text'
+                           placeholder='Full name'
+                           value={this.state.fullname}
+                           name='fullname'
+                           onChange={this.updateHandle}
+                    />
+                    <input type='password'
+                           placeholder='Password'
+                           value={this.state.password}
+                           name='password'
+                           onChange={this.updateHandle}
+                    />
+                    <input type='email'
+                         placeholder='Email address'
+                         value={this.state.email}
+                         name='email'
+                         onChange={this.updateHandle}
+                    />
+                    <input type='submit'
+                           value='Submit'
+                    />
+                </form>
+            </div>
         )
     }
 

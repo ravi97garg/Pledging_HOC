@@ -1,0 +1,37 @@
+.login-form{
+    background: linear-gradient(to bottom, #060e46, #61dafb);
+    overflow: hidden;
+}
+
+.login-form > form, .login-form > div{
+    width: 40%;
+    margin: 20px auto;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.login-form > div{
+    width: 40%;
+    margin: 30px auto;
+    font-size: 18px;
+    color: white;
+}
+
+.login-form > form > input {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 10px 0;
+    font-size: 16px;
+    padding: 8px;
+    outline-color: #060e46;
+}
+
+.login-form > form > input[type='submit']{
+    background-color: lightgreen;
+    border: 0;
+    border-radius: 5px;
+}
+
+.login-form > form > input[type='submit']:focus{
+    outline: none;
+}
